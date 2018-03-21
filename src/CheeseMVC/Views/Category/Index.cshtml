@@ -1,0 +1,20 @@
+@model List<CheeseMVC.Models.CheeseCategory>
+
+<h1>Categories</h1>
+
+@if(Model.Count == 0)
+{   
+    <br />
+    <p>Please add a cheese category.</p>
+}
+
+<ul>
+    @foreach (var i in Model)
+    {   
+        <li>
+        @i.Name
+        </li>
+    }
+</ul>
+
+<p><a asp-controller="Category" asp-action="Add">Add Category</a></p>
